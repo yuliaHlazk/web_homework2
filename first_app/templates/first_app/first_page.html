@@ -1,0 +1,10 @@
+{% extends "first_app/base.html" %}
+{% block content %}
+<div class="first-page-wrapper">
+    <h1>🎲Hmm.. Where to go today?🎲</h1>
+    <p>Натисни на кнопочку аби дізнатися куди підемо сьогодні🧐</p>
+    <form action="{% url 'first_app:index' %}" method="get">
+        <button type="submit" class="btn">запропонуй мені місце</button>
+    </form>
+</div>
+{% endblock content %}

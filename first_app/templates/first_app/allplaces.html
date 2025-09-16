@@ -1,0 +1,11 @@
+{% extends "first_app/base.html" %}
+{% block content %}
+    <ul>
+        {% for place in places %}
+            {% include "first_app/preview.html" with place=place full=False %}
+        {% endfor %}
+    </ul>
+    <div class="add-btn-wrapper">
+        <a href="{% url 'first_app:add_place' %}" class="btn">додай своє</a>
+    </div>
+{% endblock content %}
