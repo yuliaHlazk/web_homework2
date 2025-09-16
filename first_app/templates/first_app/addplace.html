@@ -1,0 +1,8 @@
+{% extends "first_app/base.html" %}
+{% block content %}
+    <form action="{% url 'first_app:add_place' %}" method="post" class="styled-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn">тиць</button>
+    </form>
+{% endblock content %}

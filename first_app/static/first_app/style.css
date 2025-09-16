@@ -1,0 +1,210 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f9fa;
+    font-family: 'Inter', Arial, sans-serif;
+    color: #333;
+}
+
+h1, h3, header, footer, .btn {
+    font-family: 'Impact', sans-serif;
+    font-weight: normal;
+}
+
+h1, h3 {
+    color: #444;
+    text-align: center;
+}
+
+
+header {
+    background-color: #222;
+    padding: 15px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: #f8f9fa;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #444;
+}
+
+/*context*/
+main {
+    flex: 1;
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.first-page-wrapper {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.first-page-wrapper p {
+    margin: 15px 0;
+}
+
+/*for place*/
+.place-card {
+    position: relative;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    margin: 15px 0;
+    padding: 15px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.place-img-wrapper {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.place-img {
+    display: inline-block;
+    max-width: 250px;
+    border-radius: 10px;
+}
+
+/*link for places*/
+.place-title {
+    display: block;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 8px 0 15px 0;
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.2s;
+    font-family: 'Impact', sans-serif;
+    font-weight: normal;
+}
+
+.place-title:hover {
+    color: #444;
+    transform: scale(1.03);
+}
+
+/*name, type, location, rating, date*/
+.label {
+    font-weight: 500;
+    color: #444;
+    margin: 5px 0;
+    display: block;
+}
+
+/*buttons*/
+.btn {
+    display: inline-block;
+    padding: 14px 20px;
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(90deg, #6c63ff, #3b82f6);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: none;
+    font-family: 'Impact', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: transform 0.2s, opacity 0.3s;
+}
+
+.btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+.form-title {
+    font-family: 'Impact', sans-serif;
+    font-size: 2.4rem;
+    font-weight: normal;
+    color: #333;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.styled-form {
+    max-width: 720px;
+    margin: 0 auto 60px auto;
+    background: #fff;
+    padding: 40px 50px;
+    border-radius: 20px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    box-sizing: border-box;
+}
+
+.styled-form label {
+    font-weight: 600;
+    color: #333;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    display: block;
+    font-family: 'Inter', sans-serif;
+    text-align: left;
+}
+
+.styled-form input,
+.styled-form select,
+.styled-form textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    background-color: #fafafa;
+    transition: border 0.3s, box-shadow 0.3s;
+    box-sizing: border-box;
+}
+
+.styled-form input::placeholder,
+.styled-form textarea::placeholder {
+    color: #bbb;
+}
+
+.styled-form select {
+    appearance: none;
+    background-color: #fafafa;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='gray' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 18px;
+    padding-right: 40px;
+}
+
+footer {
+    background-color: #222;
+    color: #f8f9fa;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9rem;
+    margin-top: auto;
+    font-family: 'Impact', sans-serif;
+}

@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hmm where to go today</title>
+    <link rel="stylesheet" href="{% static 'first_app/style.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <li><a href="{% url 'first_app:first_page' %}">головна</a></li>
+            <li><a href="{% url 'first_app:second_page' %}">усі місця</a></li>
+            <li><a href="{% url 'first_app:add_place' %}">додати нове місце</a></li>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock content %}
+    </main>
+    <footer>
+        <p>16.09.2025 Глазкова Юлія</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{% extends "first_app/base.html" %}
+{% block content %}
+    <h1>Сьогодні варто відвідати</h1>
+    {% if place %}
+        {% include "first_app/preview.html" with place=place %}
+    {% else %}
+        <p>Місць немає</p>
+    {% endif %}
+{% endblock content %}

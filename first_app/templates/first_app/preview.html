@@ -1,0 +1,60 @@
+{% load static %}
+<div class="place-card">
+    <div class="place-img-wrapper">
+        <img src="{% static 'first_app/monkey.jpeg' %}" alt="{{ place.name }}" class="place-img">
+    </div>
+
+    {% if full %}
+        <h1 class="place-title">{{ place.name }}</h1>
+    {% else %}
+        <a href="{% url 'first_app:detailed_information' %}?name={{ place.name }}" class="place-title">
+            {{ place.name }}
+        </a>
+    {% endif %}
+
+    <p class="label">
+        Опис:
+        {% if place.description %}
+            {% if full %}
+                {{ place.description }}
+            {% else %}
+            {{ place.description|truncatewords:3 }}
+            {% endif %}
+        {% else %}
+            Secret
+        {% endif %}
+    </p>
+
+    <p class="label">
+        Тип:
+        {% if place.type %}
+            {{ place.type }}
+        {% else %}
+            Secret
+        {% endif %}
+    </p>
+
+    <p class="label">
+        Локація:
+        {% if place.location %}
+            {{ place.location }}
+        {% else %}
+            Secret place👀
+        {% endif %}
+    </p>
+
+    <p class="label">
+        Рейтинг:
+        {% if place.rating == 1 %}⭐
+        {% elif place.rating == 2 %}⭐⭐
+        {% elif place.rating == 3 %}⭐⭐⭐
+        {% elif place.rating == 4 %}⭐⭐⭐⭐
+        {% elif place.rating == 5 %}⭐⭐⭐⭐⭐
+        {% endif %}
+
+    </p>
+
+    <p class="label">
+        Дата відгуку: {{ place.date_created }}
+    </p>
+</div>
